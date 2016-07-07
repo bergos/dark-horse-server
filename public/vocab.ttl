@@ -1,0 +1,59 @@
+@prefix dh: <http://ns.bergnet.org/dark-horse#> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+</vocab> a hydra:ApiDocumentation ;
+  hydra:supportedClass
+    dh:Apartment ,
+    dh:Light ,
+    dh:PowerSocket ,
+    dh:Room ,
+    dh:Thermometer .
+
+dh:Apartment a hydra:Class ;
+  hydra:supportedOperation [ a hydra:Operation ;
+    hydra:method "GET" ;
+    hydra:returns dh:Apartment
+  ] ;
+  hydra:supportedProperty [
+    hydra:property dh:room ] .
+
+dh:Light a hydra:Class ;
+  hydra:supportedOperation [ a hydra:Operation ;
+    hydra:method "GET" ;
+    hydra:returns dh:Light
+  ] , [ a hydra:Operation ;
+    hydra:method "PUT" ;
+    hydra:expects dh:Light ;
+    hydra:returns dh:Light ] ;
+  hydra:supportedProperty [
+    hydra:property dh:state ] .
+
+dh:Room a hydra:Class ;
+  hydra:supportedOperation [ a hydra:Operation ;
+    hydra:method "GET" ;
+    hydra:returns dh:Room
+  ] ;
+  hydra:supportedProperty [
+    hydra:property dh:device ] .
+
+dh:Thermometer a hydra:Class ;
+  hydra:supportedOperation [ a hydra:Operation ;
+    hydra:method "GET" ;
+    hydra:returns dh:Thermometer ] ;
+  hydra:supportedProperty [
+    hydra:property dh:temperature ] .
+
+dh:device a rdf:Property ;
+  hydra:supportedOperation [ a hydra:Operation ;
+    hydra:method "GET" ;
+    hydra:returns: dh:Device ] .
+
+dh:room a rdf:Property ;
+  hydra:supportedOperation [ a hydra:Operation ;
+    hydra:method "GET" ;
+    hydra:returns: dh:Room ] .
+
+dh:state a rdf:Property .
+
+dh:temperature a rdf:Property .

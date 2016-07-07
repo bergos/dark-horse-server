@@ -1,0 +1,38 @@
+{
+  "name": "dark-horse-server",
+  "version": "0.1.0",
+  "description": "Dark Horse server",
+  "main": "index.js",
+  "scripts": {
+    "install": "node build",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bergos/dark-horse-server.git"
+  },
+  "keywords": [
+    "mediola"
+  ],
+  "author": "Thomas Bergwinkl <bergi@axolotlfarm.org> (https://www.bergnet.org/people/bergi/card#me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bergos/dark-horse-server/issues"
+  },
+  "homepage": "https://github.com/bergos/dark-horse-server",
+  "dependencies": {
+    "dark-horse-thing": "git://github.com/bergos/dark-horse-thing.git#master",
+    "dark-horse-ui": "git://github.com/bergos/dark-horse-ui.git#master",
+    "express": "^4.14.0",
+    "hydra-middleware": "^1.0.2",
+    "morgan": "^1.7.0",
+    "rdf-formats-common": "^0.3.1",
+    "rdf-serve-static": "^0.3.0",
+    "webcomponents.js": "^0.7.22"
+  },
+  "devDependencies": {
+    "dark-horse-thing-metaweather": "git://github.com/bergos/dark-horse-thing-metaweather.git#master",
+    "standard": "^7.1.2"
+  },
+  "readmeFilename": "README.md"
+}
