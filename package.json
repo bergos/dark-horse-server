@@ -1,7 +1,7 @@
 {
   "name": "dark-horse-server",
   "version": "0.1.0",
-  "description": "Dark Horse server",
+  "description": "Server to host Dark Horse things and the Dark Horse UI",
   "main": "index.js",
   "scripts": {
     "install": "node build",
